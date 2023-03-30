@@ -32,17 +32,16 @@ class Solution {
   public:
     int minimumInteger(int N, vector<int> &A) {
         // code here
-        N = A.size();
-        long long sum = 0;
+       // N = A.size();
+        long long sum= 0;
         for(int i=0;i<N;i++){
-            sum += A[i];
+            sum+=A[i];
         }
-        int temp=INT_MAX;
+        int temp = INT_MAX;
         for(int i=0;i<N;i++){
-        long long a = N*1LL*A[i];
-            if(sum<=a){
-                temp = min(temp,A[i]);
-            }
+            long long cx = N*(long long)A[i];
+            if(sum<=cx)
+            temp=min(temp,A[i]);
         }
         return temp;
     }
