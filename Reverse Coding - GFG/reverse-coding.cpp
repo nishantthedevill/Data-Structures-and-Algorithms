@@ -7,9 +7,9 @@ class Solution {
   public:
         int sumOfNaturals(int n) {
         // code here
-         long ans =(long)n*(n+1)/2;
-         long mod=1000000007;
-         long res=(long)ans%mod;
+         long long int  ans =(long)n*(n+1)/2;
+         long long int mod=1000000007;
+         long long int res=(long)ans%mod;
          return (int)res;
     }
 };
