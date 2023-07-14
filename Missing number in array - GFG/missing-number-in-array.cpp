@@ -12,20 +12,22 @@ using namespace std;
 
 class Solution{
   public:
-    int MissingNumber(vector<int>& array, int n) {
+    int missingNumber(vector<int>& array, int n) {
         // Your code goes here
-        sort(array.begin(), array.end());
-        int i=1;
-        
-        while(i<=n){
-            if(array[i-1]!=i){
-             return i; 
+        sort(array.begin(),array.end());
+        // for(int i=0;i<n;i++){
+        //     cout<<array[i];
+        // }
+        int i=0;
+        int ans = 1;
+        while(i<n-1){
+            if(array[i]!=ans){
+            break;
             }
             i++;
-            
-            
+            ans++;
         }
-        return i-1;
+        return ans;
     }
 };
 
@@ -41,7 +43,7 @@ int main() {
         vector<int> array(n - 1);
         for (int i = 0; i < n - 1; ++i) cin >> array[i];
         Solution obj;
-        cout << obj.MissingNumber(array, n) << "\n";
+        cout << obj.missingNumber(array, n) << "\n";
     }
     return 0;
 }
